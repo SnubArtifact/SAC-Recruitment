@@ -1,0 +1,82 @@
+/* Card.css */
+.card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card--rounded {
+  border-radius: 8px;
+}
+
+.card--hover:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.card--elevation-0 {
+  box-shadow: none;
+}
+
+.card--elevation-1 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.card--elevation-2 {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.card--elevation-3 {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card--elevation-4 {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.24);
+}
+
+.card__image-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.card__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card__image {
+  transform: scale(1.03);
+}
+
+.card__header {
+  padding: 16px 16px 0;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.card__subtitle {
+  margin: 8px 0 0;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.card__content {
+  padding: 16px;
+  flex-grow: 1;
+  color:black
+}
+
+.card__footer {
+  padding: 16px;
+  border-top: 1px solid #f0f0f0;
+  background-color: #f9f9f9;
+}
