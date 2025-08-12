@@ -26,6 +26,8 @@ function Landing() {
             <Trending/>
 
            
+
+           
         </section>
         </>
     )

@@ -39,9 +39,7 @@ const Card = ({
         </div>
       )}
       
-      <div className="card__content">
-        {children}
-      </div>
+      
       
       {footer && (
         <div className="card__footer">
