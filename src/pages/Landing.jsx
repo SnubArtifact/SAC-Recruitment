@@ -2,7 +2,8 @@ import React from 'react'
 import './Landing.css'
 import Navbar from '../components/Navbar/Navbar.jsx'
 import Card from '../ui/card.jsx'
-import Trending from '../components/Trending/Trending.jsx'
+
+import Popular from '../components/Popular/Popular.jsx'
 
 
 
@@ -19,11 +20,15 @@ function Landing() {
         <section id='landing'>
             <div id='carousel-container'>
                 <div id='carousel-gallery'>
-                    hello
+                    
+                   <img src='/images/madmax.webp' alt='Mad Max' id='carousel-image'/>
+                    <h1 id='carousel-title'>Your movies at a glance.</h1>
+                  
                 </div>
             </div>
             
-            <Trending/>
+            
+            <Popular/>
 
            
 
