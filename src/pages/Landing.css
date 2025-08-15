@@ -1,37 +1,108 @@
-#landing{
-   
-    height: 300vh;
-    width: 99vw;
-    margin:0 0 0 0 ;
-    background-color: #541919;
-}
-#carousel-container{
-    background-color: #682b2b;
-    height:423px;
-    width:70%;
-  margin:auto;
-  border-radius: 10px;
 
-   
-   
-}
-#carousel-image{
-
-    object-fit:cover;
-    height:100%;
-    width:100%;
-    border-radius: 10px;
-    opacity:0.4
+#landing {
+  width: 100vw;
+  margin: 0;
+  background: linear-gradient(135deg, #541919 0%, #3a1111 100%);
+  padding: 40px 0 60px;
+  position: relative;
+  overflow: hidden;
 }
 
-#carousel-title{
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-80%, -50%);
-    color: white;
-    font-size: 3.5rem;
-    text-align: center;
-    font-weight: bold;
+
+#carousel-container {
+  background: linear-gradient(145deg, #682b2b 0%, #4d1f1f 100%);
+  height: 500px;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
+#carousel-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+
+#carousel-image {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  opacity: 0.4;
+  transition: opacity 0.8s ease, transform 1s ease;
+}
+
+#carousel-container:hover #carousel-image {
+  opacity: 0.5;
+  transform: scale(1.02);
+}
+
+
+#carousel-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 4.5rem;
+  text-align: center;
+  font-weight: 800;
+  text-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+  letter-spacing: 2px;
+  width: 90%;
+  margin: 0 auto;
+  transition: all 0.5s ease;
+  z-index: 2;
+  font-family: 'Arial', sans-serif;
+  text-transform: uppercase;
+}
+
+
+#carousel-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to bottom, rgba(84, 25, 25, 0.8), transparent);
+  z-index: 1;
+  border-radius: 15px 15px 0 0;
+}
+
+#carousel-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to top, rgba(84, 25, 25, 0.8), transparent);
+  z-index: 1;
+  border-radius: 0 0 15px 15px;
+}
+
+
+
+
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+#carousel-title {
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
